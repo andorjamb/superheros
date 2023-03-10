@@ -1,0 +1,39 @@
+{
+    "host": "localhost",
+    "port": 3306,
+    "admin": "luke",
+    "user": "jackson",
+    "userpassword": "YyT4xSKL",
+    "dropUser": true,
+    "debug": true,
+    "database": "superherodb",
+    "allowPublicKeyRetrieval": true,
+    "tables": [
+        {
+            "tableName": "superhero",
+            "columns": [
+                "heroID integer not null primary key",
+                "name varchar(21) not null",
+                "strength varchar(6) not null",
+                "costume varchar(15) not null",
+                "yearOfBirth integer not null"
+            ],
+            "data": [
+                [
+                    1,
+                    "Superman",
+                    "*****",
+                    "blue",
+                    1979
+                ],
+                [
+                    2,
+                    "Ironman",
+                    "***",
+                    "red",
+                    1978
+                ]
+            ]
+        }
+    ]
+}
