@@ -1,0 +1,22 @@
+{
+    "getAll": [
+        "select heroID,name,strength,costume,yearOfBirth from superhero"
+    ],
+    "get": [
+        "select heroID,name,strength,costume,yearOfBirth from superhero",
+        "where heroID=?"
+    ],
+    "insert": [
+        "insert into superhero (heroID, name, strength, costume, yearOfBirth)",
+        "values(?,?,?,?,?)"
+    ],
+    "update": [
+        "update superhero set name=?, strength=?, costume=?, yearOfBirth=?",
+        "where heroID=?"
+    ],
+    "remove": [
+        "delete from superhero where heroID=?"
+    ],
+    "primaryKey": "heroID",
+    "resource": "superherodb"
+}
