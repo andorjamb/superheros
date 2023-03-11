@@ -4,5 +4,6 @@
   "user": "luke",
   "password": "YyT4xSKL",
   "database": "superherodb",
+  "socketPath": "/tmp/mysql.sock",
   "allowPublicKeyRetrieval": true
 }

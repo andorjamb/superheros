@@ -12,10 +12,13 @@ let createStatementFile = './createStatements.json';
 let adminPass = '';
 
 if (process.argv.length > 2) {
-    adminPass = process.argv[2];
+    startOption = process.argv[2];
+    //adminPass = process.argv[2];
     if (process.argv.length > 3) {
-        createStatementFile = `./${process.argv[3]}`;
+        adminPass = process.argv[2];
+        //createStatementFile = `./${process.argv[3]}`;
     }
+
 }
 
 console.log(createStatementFile, adminPass);
@@ -32,6 +35,7 @@ async function createDb(createStatements, adminPass) {
         port: createStatements.port,
         user: createStatements.admin,
         password: adminPass,
+        socketPath: createStatements.socketPath,
         allowPublicKeyRetrieval: createStatements.allowPublicKeyRetrieval,
     };
     const DEBUG = createStatements.debug;
@@ -42,9 +46,12 @@ async function createDb(createStatements, adminPass) {
     const createDatabaseSql = `create database ${createStatements.database}`;
     const dropUserSql = `drop user if exists ${user}`;
     const createUserSql = `create user if not exists ${user} ` +
-        `identified by '${createStatements.userpassword}'`;
+        `identified by password('${createStatements.userpassword}')`;
     const grantPrivilegesSql =
         `grant all privileges on ${createStatements.database}.* to ${user}`;
+
+    /*   CREATE USER 'johnSmith'@'%' IDENTIFIED BY PASSWORD('passwd');
+GRANT ALL ON company.* TO 'johnSmith'@'%' REQUIRE SSL; */
 
     try {
         await db.doQuery(dropDatabaseSql);

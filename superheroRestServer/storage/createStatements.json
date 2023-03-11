@@ -2,7 +2,7 @@
     "host": "localhost",
     "port": 3306,
     "admin": "luke",
-    "user": "jackson",
+    "user": "luke",
     "userpassword": "YyT4xSKL",
     "dropUser": true,
     "debug": true,
