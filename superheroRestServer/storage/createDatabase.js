@@ -8,17 +8,14 @@ const printError = message =>
     printMessage(`${'.'.repeat(20)} Create Database Error ${'.'.repeat(20)}\n`,
         `${message}\n${'.'.repeat(47)}`);
 
-let createStatementFile = './createStatements.json';
+let createStatementFile = '/Petelin_Anna_superhero_createStatements.json';
 let adminPass = '';
 
 if (process.argv.length > 2) {
-    startOption = process.argv[2];
-    //adminPass = process.argv[2];
+    adminPass = process.argv[2];
     if (process.argv.length > 3) {
-        adminPass = process.argv[2];
-        //createStatementFile = `./${process.argv[3]}`;
+        createStatementFile = `./${process.argv[3]}`;
     }
-
 }
 
 console.log(createStatementFile, adminPass);
@@ -49,9 +46,6 @@ async function createDb(createStatements, adminPass) {
         `identified by password('${createStatements.userpassword}')`;
     const grantPrivilegesSql =
         `grant all privileges on ${createStatements.database}.* to ${user}`;
-
-    /*   CREATE USER 'johnSmith'@'%' IDENTIFIED BY PASSWORD('passwd');
-GRANT ALL ON company.* TO 'johnSmith'@'%' REQUIRE SSL; */
 
     try {
         await db.doQuery(dropDatabaseSql);
