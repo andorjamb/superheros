@@ -31,7 +31,7 @@ async function createDb(createStatements, adminPass) {
         host: createStatements.host,
         port: createStatements.port,
         user: createStatements.admin,
-        password: adminPass,
+        password: createStatements.adminPass,
         socketPath: createStatements.socketPath,
         allowPublicKeyRetrieval: createStatements.allowPublicKeyRetrieval,
     };
