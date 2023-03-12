@@ -18,6 +18,8 @@ header {
     align-items: center;
     height: 15vh;
     color: white;
+    background-color: rgb(85, 109, 168);
+
 }
 
 main {
@@ -36,14 +38,9 @@ button {
     border-radius: 5px;
     border: none;
     box-shadow: 4px 4px 4px grey;
-    margin: 1rem;
+    margin: 0.5rem;
 }
 
-div.menuButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 input {
     padding: 1rem;
@@ -89,16 +86,21 @@ th {
 }
 
 div.submitButton {
-    padding: 2rem;
-    align-content: left;
+    padding: 1rem;
 }
 
 button.submitButton {
-    background-color: rgb(199, 225, 29);
+    background-color: rgb(242, 245, 71);
 }
 
 button.submitButton:active {
     background-color: rgb(239, 193, 57);
+}
+
+div.menuButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 div.removeField,
@@ -106,4 +108,12 @@ div.getField {
     display: flex;
     height: 50vh;
 
+}
+
+button.menuButton:hover {
+    background-color: rgb(219, 58, 50);
+}
+
+button.menuButton:active {
+    background-color: rgb(85, 109, 168);
 }
