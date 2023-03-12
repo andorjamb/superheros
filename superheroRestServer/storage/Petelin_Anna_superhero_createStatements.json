@@ -1,12 +1,13 @@
 {
     "host": "localhost",
     "port": 3306,
-    "admin": "root",
+    "admin": "s2200743",
     "user": "luke",
     "userpassword": "YyT4xSKL",
     "dropUser": true,
     "debug": true,
     "database": "superherodb",
+    "socketPath": "/tmp/mysql.sock",
     "allowPublicKeyRetrieval": true,
     "tables": [
         {

@@ -8,7 +8,7 @@ const printError = message =>
     printMessage(`${'.'.repeat(20)} Create Database Error ${'.'.repeat(20)}\n`,
         `${message}\n${'.'.repeat(47)}`);
 
-let createStatementFile = '/Petelin_Anna_superhero_createStatements.json';
+let createStatementFile = './Petelin_Anna_superhero_createStatements.json';
 let adminPass = '';
 
 if (process.argv.length > 2) {
@@ -42,8 +42,8 @@ async function createDb(createStatements, adminPass) {
     const dropDatabaseSql = `drop database if exists ${createStatements.database}`;
     const createDatabaseSql = `create database ${createStatements.database}`;
     const dropUserSql = `drop user if exists ${user}`;
-    const createUserSql = `create user if not exists ${user} ` +
-        `identified by password('${createStatements.userpassword}')`;
+    const createUserSql = `create user if not exists ${user}` +
+        `identified by '${createStatements.userpassword}'`;
     const grantPrivilegesSql =
         `grant all privileges on ${createStatements.database}.* to ${user}`;
 

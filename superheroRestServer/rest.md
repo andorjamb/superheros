@@ -44,11 +44,11 @@ POST /api/superheros
 
 ```json
 {
-  "id": 3,
-  "name": "BMI 2",
-  "type": "laptop",
-  "processor": "Brain 456",
-  "amount": 25
+  "heroID": 3,
+  "name": "Black Widow",
+  "strength": "***",
+  "costume": "black",
+  "yearOfBith": 1984
 }
 ```
 
@@ -67,11 +67,11 @@ The id must match the number given in URI
 
 ### DELETE
 
-remove computer
+remove superhero
 
-DELETE /api/computers/2
+DELETE /api/superheros/2
 
-deletes computer number 2 and returns a status object
+deletes superhero number 2 and returns a status object
 
 # javascript (fetch)
 
@@ -85,44 +85,44 @@ const option = {
   mode: "cors",
 };
 
-const allComputers = "http://localhost:4000/api/computers";
-const oneComputer = "http://localhost:4000/api/computers/2";
-const data = await fetch(oneComputer, options);
+const allSuperheros = "http://localhost:4000/api/superheros";
+const oneSuperhero = "http://localhost:4000/api/superheros/2";
+const data = await fetch(oneSuperhero, options);
 const result = await data.json();
 
-const data2 = await fetch(allComputers, { mode: "cors" }); //GET is default
+const data2 = await fetch(allsuperheros, { mode: "cors" }); //GET is default
 const result2 = await data2.json();
 ```
 
 ### POST and PUT
 
 ```js
-const computerObject={
-    "id":3,
-    "name":"BMI 2",
-    "type":"laptop",
-    "processor":"Brain 456",
-    "amount":25
+const superheroObject={
+  "heroID": 3,
+  "name": "Black Widow",
+  "strength": "***",
+  "costume": "black",
+  "yearOfBith": 1984
 };
 
-const option={
+const option = {
     method:'POST',
     mode:'cors',
     headers:{'Content-Type':'application/json'},
-    body:JSON.stringify(computerObject);
+    body:JSON.stringify(superheroObject);
 }
-const postComputers='http://localhost:4000/api/computers';
-const data=await fetch(postComputer,options);
+const postSuperheros='http://localhost:4000/api/superheros';
+const data = await fetch(postSuperhero,options);
 const result = await data.json();
 
 const putoption={
     method:'PUT',
     mode:'cors',
     headers:{'Content-Type':'application/json'},
-    body:JSON.stringify(computerObject);
+    body:JSON.stringify(superheroObject);
 }
-const putComputer='http://localhost:4000/api/computers/2';
-const data2=await fetch(putComputer,putoptions);
+const putSuperhero='http://localhost:4000/api/superheros/2';
+const data2=await fetch(putSuperhero,putoptions);
 const result2 = await data.json();
 
 ```
@@ -135,7 +135,7 @@ const option = {
   mode: "cors",
 };
 
-const oneComputer = "http://localhost:4000/api/computers/2";
-const data = await fetch(oneComputer, options);
+const oneSuperhero = "http://localhost:4000/api/superheros/2";
+const data = await fetch(oneSuperhero, options);
 const result = await data.json();
 ```
