@@ -4,28 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/styles/styles.css">
-    <script src="/js/addHandler.js"></script>
+    <script src="/scripts/addHandler.js"></script>
     <title>Add Superhero</title>
 </head>
 
 <body>
-    <main>
+    <header>
         <h1>Add New Superhero</h1>
+    </header>
+    <main>
+
         <div class="fields">
             <div>
-                <label>Id: <input type="text" id="heroID"></label>
+                <label for="heroID">Id:</label> <input type="text" id="heroID">
             </div>
             <div>
-                <label>Name: <input type="text" id="name"></label>
+                <label for="name">Name:</label> <input type="text" id="name">
             </div>
             <div>
-                <label>Strength: <input type="text" id="strength"></label>
+                <label for="strength">Strength: </label><input type="text" id="strength">
             </div>
             <div>
-                <label>Costume: <input type="text" id="costume"></label>
+                <label for="costume"></label>Costume: <input type="text" id="costume">
             </div>
             <div>
-                <label>Year of birth: <input type="text" id="yearOfBirth"></label>
+                <label for="yearOfBirth">Year of birth: </label><input type="text" id="yearOfBirth">
             </div>
         </div>
         <button id="submit">Submit</button>

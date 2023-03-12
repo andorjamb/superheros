@@ -1,9 +1,9 @@
 {
     "getAll": [
-        "select heroID,name,strength,costume,yearOfBirth from superhero"
+        "select heroID, name, strength, costume, yearOfBirth from superhero"
     ],
     "get": [
-        "select heroID,name,strength,costume,yearOfBirth from superhero",
+        "select heroID, name, strength, costume, yearOfBirth from superhero",
         "where heroID=?"
     ],
     "insert": [
@@ -18,5 +18,5 @@
         "delete from superhero where heroID=?"
     ],
     "primaryKey": "heroID",
-    "resource": "superherodb"
+    "resource": "superheros"
 }

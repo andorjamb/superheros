@@ -9,9 +9,10 @@
             const data =
                 await fetch('http://localhost:4000/api/superheros', { mode: 'cors' });
             const superheros = await data.json();
+            console.log(superheros);
 
             const resultset = document.getElementById('resultset');
-            
+
             for (const superhero of superheros) {
                 const tr = document.createElement('tr');
                 tr.appendChild(createCell(superhero.heroID));

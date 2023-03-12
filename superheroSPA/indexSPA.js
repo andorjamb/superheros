@@ -11,4 +11,4 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'menu.html')));
 
-app.listen(port, host, () => console.log(`${host}:${port} serving...`));
+app.listen(port, host, () => console.log(`serving SPA page at ${host}:${port} ...`));

@@ -22,7 +22,11 @@
             if (heroID.value.trim().length > 0) {
                 const data =
                     await fetch(`http://localhost:4000/api/superheros/${heroID.value}`,
-                        { mode: 'cors' });
+                        {
+                            mode: 'cors',
+
+                        });
+
                 const result = await data.json();
                 if (result) {
                     if (result.message) {
@@ -52,13 +56,14 @@
 
     function updateSuperhero(result) {
         if (result.length === 0) return;
+        console.log(result[0]);
         const superhero = result[0];
         resultarea.innerHTML = `
         <p><span class="legend">Hero Id</span> ${superhero.heroID}</p>
         <p><span class="legend">Name</span> ${superhero.name}</p>
-        <p><span class="legend">Type</span> ${superhero.strength}</p>
-        <p><span class="legend">Processor</span> ${superhero.costume}</p>
-        <p><span class="legend">Amount</span> ${superhero.yearOfBirth}</p>
+        <p><span class="legend">Strength</span> ${superhero.strength}</p>
+        <p><span class="legend">Costume</span> ${superhero.costume}</p>
+        <p><span class="legend">Year of Birth</span> ${superhero.yearOfBirth}</p>
         `
     }
 
