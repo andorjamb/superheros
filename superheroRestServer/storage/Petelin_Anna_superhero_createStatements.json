@@ -33,6 +33,27 @@
                     "***",
                     "red",
                     1970
+                ],
+                [
+                    3,
+                    "The Hulk",
+                    "*****",
+                    "green",
+                    1962
+                ],
+                [
+                    4,
+                    "Professor X",
+                    "**",
+                    "bald",
+                    1938
+                ],
+                [
+                    5,
+                    "Wolverine",
+                    "***",
+                    "blue and yellow",
+                    1832
                 ]
             ]
         }
