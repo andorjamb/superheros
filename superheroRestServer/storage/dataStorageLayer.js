@@ -34,11 +34,11 @@ module.exports = class Datastorage {
                 resolve(result.queryResult);
             }
             catch (err) {
-                console.log(err); //for debugging
+                console.log(err);
                 reject(MESSAGES.PROGRAM_ERROR());
             }
         });
-    } //end of getAll
+    }
 
     get(key) {
         return new Promise(async (resolve, reject) => {
@@ -52,11 +52,11 @@ module.exports = class Datastorage {
                 }
             }
             catch (err) {
-                console.log(err); //for debugging
+                console.log(err);
                 reject(MESSAGES.PROGRAM_ERROR());
             }
         })
-    } //end of get
+    }
 
     insert(resourceObject) {
         return new Promise(async (resolve, reject) => {
@@ -65,11 +65,11 @@ module.exports = class Datastorage {
                 resolve(MESSAGES.INSERT_OK(PRIMARY_KEY, resourceObject[PRIMARY_KEY]));
             }
             catch (err) {
-                console.log(err); //for debugging
+                console.log(err);
                 reject(MESSAGES.NOT_INSERTED());
             }
         })
-    } //end of insert
+    }
 
     update(key, resourceObject) {
         return new Promise(async (resolve, reject) => {
@@ -100,11 +100,11 @@ module.exports = class Datastorage {
                 }
             }
             catch (err) {
-                console.log(err); //for debugging
+                console.log(err);
                 reject(MESSAGES.PROGRAM_ERROR());
             }
         })
-    } //end of update
+    }
 
     remove(key) {
         return new Promise(async (resolve, reject) => {
@@ -118,10 +118,10 @@ module.exports = class Datastorage {
                 }
             }
             catch (err) {
-                console.log(err); //for debugging
+                console.log(err);
                 reject(MESSAGES.PROGRAM_ERROR());
             }
         })
-    } //end of remove
+    }
 
-}//end of class
+}//end of Datastorage class

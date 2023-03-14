@@ -2,10 +2,9 @@
 
 const path = require('path');
 const cors = require('cors');
-
 const express = require('express');
-const app = express();
 
+const app = express();
 const { port, host } = require('./config.json');
 const Datastorage =
     require(path.join(__dirname, 'storage', 'dataStorageLayer.js'));
@@ -18,14 +17,14 @@ const RESOURCE = storage.resource;
 app.use(cors());
 app.use(express.json());
 
-app.get(`/api/${RESOURCE}`, (req, res) =>
-    storage.getAll()
+app.get(`/api/${RESOURCE}/:key`, (req, res) =>
+    storage.get(req.params.key)
         .then(result => res.json(result))
         .catch(err => res.json(err))
 );
 
-app.get(`/api/${RESOURCE}/:key`, (req, res) =>
-    storage.get(req.params.key)
+app.get(`/api/${RESOURCE}`, (req, res) =>
+    storage.getAll()
         .then(result => res.json(result))
         .catch(err => res.json(err))
 );
@@ -50,7 +49,7 @@ app.delete(`/api/${RESOURCE}/:key`, (req, res) =>
         .catch(err => res.json(err))
 );
 
-app.all('*', (req, res) => res.json('method not supported by rest server'));
+app.all('/*', (req, res) => res.json('method not supported by rest server,'));
 
 app.listen(port, host,
-    () => console.log(`Server alive and listening on ${host}:${port}`));
+    () => console.log(`Server alive and listening on ${host}:${port}, ready to serve ${RESOURCE}`));

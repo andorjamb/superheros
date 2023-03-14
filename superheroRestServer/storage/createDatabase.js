@@ -43,7 +43,7 @@ async function createDb(createStatements, adminPass) {
     const createDatabaseSql = `create database ${createStatements.database}`;
     const dropUserSql = `drop user if exists ${user}`;
     const createUserSql = `create user if not exists ${user}` +
-        `identified by '${createStatements.userpassword}'`;
+        ` identified by '${createStatements.userpassword}'`;
     const grantPrivilegesSql =
         `grant all privileges on ${createStatements.database}.* to ${user}`;
 
