@@ -23,7 +23,7 @@
             }
 
             const data =
-                await fetch(`http://localhost:4000/api/suerheros/${heroID}`, options);
+                await fetch(`http://localhost:4000/api/superheros/${heroID}`, options);
             const status = await data.json();
 
             if (status.message) {

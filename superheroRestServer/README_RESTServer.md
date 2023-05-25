@@ -14,9 +14,9 @@ GET http://localhost:4000/api/superheros HTTP/1.1
 
 GET /api/superheros
 
-returns all computers as a json (or some other format) array
+returns all superheros as a json (or some other format) array
 
-computer number 2
+superhero number 2
 
 ```
 http://localhost:4000/api/superheros/2
@@ -24,7 +24,7 @@ http://localhost:4000/api/superheros/2
 
 GET /api/superheros/2
 
-returns the computer with id 2
+returns the superhero with id 2
 
 ```json
 {
@@ -60,9 +60,9 @@ update or add
 
 PUT /api/superheros/3
 
-computer is given as json object. Returns a status object.
-if the computer with given number doesn't exist, it will be added.
-If the computer exists, the it will be updated.
+superhero is given as json object. Returns a status object.
+if the superhero with given number doesn't exist, it will be added.
+If the superhero exists, the it will be updated.
 The id must match the number given in URI
 
 ### DELETE

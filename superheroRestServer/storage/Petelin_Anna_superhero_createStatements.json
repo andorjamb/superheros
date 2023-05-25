@@ -1,61 +1,31 @@
 {
-    "host": "localhost",
-    "port": 3306,
-    "admin": "s2200743",
-    "user": "luke",
-    "userpassword": "YyT4xSKL",
-    "dropUser": true,
-    "debug": true,
-    "database": "superherodb",
-    "socketPath": "/tmp/mysql.sock",
-    "allowPublicKeyRetrieval": true,
-    "tables": [
-        {
-            "tableName": "superhero",
-            "columns": [
-                "heroID integer not null primary key",
-                "name varchar(21) not null",
-                "strength varchar(6) not null",
-                "costume varchar(15) not null",
-                "yearOfBirth integer not null"
-            ],
-            "data": [
-                [
-                    1,
-                    "Superman",
-                    "*****",
-                    "blue",
-                    1938
-                ],
-                [
-                    2,
-                    "Ironman",
-                    "***",
-                    "red",
-                    1970
-                ],
-                [
-                    3,
-                    "The Hulk",
-                    "*****",
-                    "green",
-                    1962
-                ],
-                [
-                    4,
-                    "Professor X",
-                    "**",
-                    "bald",
-                    1938
-                ],
-                [
-                    5,
-                    "Wolverine",
-                    "***",
-                    "blue and yellow",
-                    1832
-                ]
-            ]
-        }
-    ]
+  "host": "localhost",
+  "port": 3306,
+  "admin": "andor",
+  "user": "luke",
+  "userpassword": "YyT4xSKL",
+  "dropUser": true,
+  "debug": true,
+  "database": "superherodb",
+  "socketPath": "/tmp/mysql.sock",
+  "allowPublicKeyRetrieval": true,
+  "tables": [
+    {
+      "tableName": "superhero",
+      "columns": [
+        "heroID integer not null primary key",
+        "name varchar(21) not null",
+        "strength varchar(6) not null",
+        "costume varchar(15) not null",
+        "yearOfBirth integer not null"
+      ],
+      "data": [
+        [1, "Superman", "*****", "blue", 1938],
+        [2, "Ironman", "***", "red", 1970],
+        [3, "The Hulk", "*****", "green", 1962],
+        [4, "Professor X", "**", "bald", 1938],
+        [5, "Wolverine", "***", "blue and yellow", 1832]
+      ]
+    }
+  ]
 }

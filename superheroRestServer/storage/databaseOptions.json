@@ -2,7 +2,7 @@
   "host": "localhost",
   "port": 3306,
   "user": "luke",
-  "admin": "s2200743",
+  "admin": "andor",
   "password": "YyT4xSKL",
   "database": "superherodb",
   "socketPath": "/tmp/mysql.sock",
